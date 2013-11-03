@@ -1,0 +1,17 @@
+/* site wide */
+body {
+  padding: 2em 5em;
+  background: url('/images/crisp_paper_ruffles.png') repeat;
+  line-height: 1.5em;
+  color: #555;
+}
+
+.panel-body { box-shadow: 0.3em 0.3em 0.3em #dadada; }
+span.glyphicon { margin-right: 0.4em; }
+
+/* CSS for / */
+.search-results { margin-top: 2em; }
+
+/* CSS for /settings */
+.setting-blocks { margin-top: 3em; }
+
