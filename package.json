@@ -7,6 +7,8 @@
     "express": "3.x.x",
     "connect-powered-by": "0.1.x",
     "ejs": "0.8.x",
-    "express-partials": "~0.1.1"
+    "express-partials": "~0.1.1",
+    "crypto": "0.0.3",
+    "superagent": "~0.15.7"
   }
 }
