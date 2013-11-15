@@ -26,13 +26,21 @@
         <% for(var i = 0; i < this.results.length; i++) { %>
            <tr>
              <td><%= this.results[i].title %></td>
-             <td><span class="badge pull-right">Source</span></td>
+             <td>
+               <span class="badge pull-right">
+                 <%= this.results[i].source %>
+               </span>
+             </td>
            </tr>
            <% } %>
       </tbody>
     </table>
     <% } else { %>
-    <span class="text-muted">Your search results will be displayed here.</span>
+      <center>
+        <span class="text-muted">
+          Your search results will be displayed here.
+        </span>
+      </center>
     <% } %>
 
   </div>
