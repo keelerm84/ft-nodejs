@@ -1,39 +1,39 @@
 <div class="row">
   <div class="col-lg-12">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Please specify your search term">
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
-      </span>
-    </div><!-- /input-group -->
+    <form action="/" method="post" role="form" class="form-horizontal" id="search">
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input type="text" name="term" class="form-control"
+                 placeholder="Please specify your search term" />
+        </div>
+        <button class="btn btn-primary" type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+          Search
+        </button>
+      </div>
+    </form>
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
 
 <div class="row search-results">
   <div class="col-lg-12">
+
+    <% if (this.results) { %>
     <h5 class="text-info">Search Results &hellip;</h5>
 
     <table class="table table-striped table-hover">
       <tbody>
-        <tr>
-          <td>12 Angry Men</td>
-          <td><span class="badge pull-right">KickAssTorrents</span></td>
-        </tr>
-        <tr>
-          <td>Mr. Smith Goes to Washington</td>
-          <td><span class="badge pull-right">Mininova</span></td>
-        </tr>
+        <% for(var i = 0; i < this.results.length; i++) { %>
+           <tr>
+             <td><%= this.results[i].title %></td>
+             <td><span class="badge pull-right">Source</span></td>
+           </tr>
+           <% } %>
       </tbody>
     </table>
+    <% } else { %>
+    <span class="text-muted">Your search results will be displayed here.</span>
+    <% } %>
 
-    <ul class="pagination">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li class="active"><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
   </div>
 </div>

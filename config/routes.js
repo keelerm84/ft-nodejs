@@ -6,7 +6,7 @@
 // Guide on [routing](http://locomotivejs.org/guide/routing.html) for additional
 // information.
 module.exports = function routes() {
-  this.root('main#index');
+  this.match('/', 'main#index', { via: ['POST', 'GET'] });
   this.match('about', 'main#about');
   this.match('login', 'auth#login');
   this.match('settings', 'settings#index');
