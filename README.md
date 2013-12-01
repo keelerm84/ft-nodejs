@@ -14,3 +14,10 @@ To install this application,
     cd ft-nodejs
     npm install
     lcm server
+
+## Configuring Client
+Currently, configuration of the client relies on manually editing the
+configuration file.  Eventually this will be handled through the UI.
+
+For now, simply edit the file app/models/settings.js and specify the host and
+private/public key pairs.
