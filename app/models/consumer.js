@@ -18,7 +18,12 @@ Consumer.prototype.set = function(name, link) {
     return;
   }
 
+  if (link instanceof Array) {
+    link = link[0];
+  }
+
   link.href = this.settings.host + '/' + link.href;
+
   this.links[name] = link;
 };
 

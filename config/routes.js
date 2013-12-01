@@ -7,6 +7,7 @@
 // information.
 module.exports = function routes() {
   this.match('/', 'main#index', { via: ['POST', 'GET'] });
+  this.match('/download', 'main#download', { via: ['POST'] });
   this.match('about', 'main#about');
   this.match('login', 'auth#login');
   this.match('settings', 'settings#index');

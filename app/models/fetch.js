@@ -59,14 +59,14 @@ Fetch.prototype.get = function(path, templates, callback) {
 
 Fetch.prototype.put = function(path, templates, body, callback) {
   var url = this.resolvePath(path, templates);
-  var agent = this.generateAgent(body);
+  var response = superagent.agent().put(url);
   var that = this;
 
-  agent.put(url)
-    .type('form')
+  this.signResponse(response, JSON.stringify(body))
+    .type('json')
     .send(body)
     .end(function(error, response) {
-      if (error || response.status != '200') {
+      if (error || response.status != 200) {
         return callback(error);
       }
 
@@ -84,6 +84,11 @@ Fetch.prototype.updateConsumerLinks = function(response) {
   }
 
   var links = body._links;
+
+  if (!links.hasOwnProperty("curies")) {
+    return;
+  }
+
   var curie = links.curies[0].name;
 
   for (var prop in links) {
