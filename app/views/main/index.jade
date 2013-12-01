@@ -1,0 +1,32 @@
+extends ../layout
+
+block body
+  div.row
+    div.col-lg-12
+      form(action="/", method="post", role="form")#search.form-horizontal
+        div.form-group
+          div.col-sm-10
+            input(type="text", name="term", placeholder="Please specify your search term").form-control
+          button(type="submit").btn.btn-primary
+            span.glyphicon.glyphicon-search
+            | Search
+
+  div.row.search-results
+    div.col-lg-12
+
+      if this.results
+        h5.text-info Search Results &hellip;
+
+        table.table.table-striped.table-hover
+          tbody
+            - for(var i = 0; i < this.results.length; i++)
+              tr(data-target=this.results[i].target)
+                 td= this.results[i].title
+                 td
+                   span.badge.pull-right= this.results[i].source
+      else
+        center
+          span.text-muted Your search results will be displayed here.
+
+block js
+  script(type="text/javascript", src="/js/main.js")

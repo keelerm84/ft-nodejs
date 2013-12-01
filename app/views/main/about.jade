@@ -1,0 +1,47 @@
+extends ../layout
+
+block body
+  div.row
+    div.col-lg-12
+      h3.text-info What is find.torrent?
+      p
+        a(href="https://github.com/Tortugas-Consulting-LLC/find.torrent") find.torrent
+        |  is a service to facilitate the discovery and downloading of torrent files
+        | to a home server or leachbox. The service provides a REST API for
+        | searching configured torrent RSS feeds and triggering a file download at
+        | the server. Neither the torrent file nor its indicated content is
+        | returned to the client; the .torrent file is simply downloaded to a
+        | configured location at the server. Another service such as Transmission
+        | needs to be running on the server to process the downloaded .torrents for
+        | any additional action to be taken.
+      p
+        | The source code for find.torrent can be viewed
+        | on 
+        a(href="https://github.com/keelerm84/ft-nodejs") GitHub.
+  
+  div.row
+    div.col-lg-12
+      h3.text-info What is find.torrent node.js
+      p
+        | Since find.torrent was built as a standalone API service, it by itself is
+        | not sufficient.  It needs applications to be built to consume its
+        | service.  This site, created
+        | by 
+        a(href="http://matthewmkeeler.com") Matthew M. Keeler
+        | , is such a client.  It is built on top of 
+        a(href="http://nodejs.org") node.js
+        | , a server side Javascript framework.
+  
+      p
+        | The source code for this site can be viewed
+        | on 
+        a(href="https://github.com/keelerm84/ft-nodejs") GitHub.
+  
+  div.row
+    div.col-lg-12
+      h3.text-info Who is Tortugas Consulting?
+      p
+        | Founded by Jacob Walker and Matthew Keeler,
+        a(href="http://tortugas-llc.com") Tortugas Consulting, LLC.
+        | is a small development company operating out of Kansas.  They are the
+        | original creators of the find.torrent API service.

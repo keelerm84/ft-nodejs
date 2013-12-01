@@ -4,7 +4,7 @@ var locomotive = require('locomotive')
 var SettingsController = new Controller();
 
 SettingsController.index = function() {
-  this.render();
+  this.render('', { layout: false });
 };
 
 module.exports = SettingsController;

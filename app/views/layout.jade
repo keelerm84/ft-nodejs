@@ -1,0 +1,44 @@
+!!!5
+html
+  head
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+    nav(role="navigation").navbar.navbar-default
+      <!-- Brand and toggle get grouped for better mobile display -->
+      div.navbar-header
+        button(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1").navbar-toggle
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href="/").navbar-brand find.torrent node.js
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      div#bs-example-navbar-collapse.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href="/")
+              span.glyphicon.glyphicon-home 
+              | Home
+          li
+            a(href="/about")
+              span.glyphicon.glyphicon-info-sign
+              | About
+          li
+            a(href="/settings")
+              span.glyphicon.glyphicon-cog
+              | Settings
+          li
+            a(href="/login")
+              span.glyphicon.glyphicon-user
+              | Login
+
+    div.panel.panel-default
+      div.panel-body
+        block body
+
+    script(type="text/javascript", src="/js/jquery-1.10.2.min.js")
+    script(type="text/javascript", src="/js/bootstrap.min.js")
+    block js

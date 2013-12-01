@@ -4,7 +4,7 @@ var locomotive = require('locomotive')
 var AuthController = new Controller();
 
 AuthController.login = function() {
-  this.render();
+  this.render('', { layout: false });
 };
 
 module.exports = AuthController;

@@ -1,0 +1,41 @@
+extends ../layout
+
+block body
+  form(role="form").form-horizontal
+    div.form-group
+      label(for="host").col-sm-2.control-label Host
+      div.col-sm-10
+        input(type="url", placeholder="find.torrent API host address").form-control#host
+        | span.help-block Specify the full URL where the find.torrent API service is running.
+  
+    div.setting-blocks
+      div.form-group
+        label(for="public").col-sm-2.control-label Public API Key
+        div.col-sm-10
+          input(type="text", placeholder="Public API Key").form-control
+  
+      div.form-group
+        label(for="private").col-sm-2.control-label Private API Key
+        div.col-sm-10
+          input(type="text", placeholder="Private API Key").form-control#private
+          | span.help-block API keys are generated from the find.torrent console application.  See
+          | the 
+          a(href="https://github.com/Tortugas-Consulting-LLC/find.torrent/blob/master/README.md") find.torrent README
+          | for details.
+  
+    div.setting-blocks
+      div.form-group
+        label(for="username").col-sm-2.control-label Username
+        div.col-sm-10
+          input(type="text", placeholder="Username").form-control#username
+  
+      div.form-group
+        label(for="password").col-sm-2.control-label Password
+        div.col-sm-10
+          input(type="password", placeholder="Password").form-control#password
+          span.help-block
+            A username and password must be specified before anyone can use this site.
+  
+    div.form-group
+      div.col-sm-offset-2 col-sm-10
+        button(type="submit").btn.btn-primary Save Settings

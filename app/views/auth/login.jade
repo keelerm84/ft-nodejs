@@ -1,0 +1,25 @@
+extends ../layout
+
+block body
+  div.alert.alert-info You must login to access this site.
+  
+  form(role="form").form-horizontal
+    div.form-group
+      label(for="username").col-sm-2.control-label Username
+      div.col-sm-10
+        input(type="text", placeholder="Username").form-control#username
+  
+    div.form-group
+      label(for="password").col-sm-2.control-label Password
+      div.col-sm-10
+        input(type="password", placeholder="Password").form-control#password
+  
+    div.form-group
+      div.col-sm-offset-2.col-sm-10
+        div.checkbox
+          label
+            input(type="checkbox") Remember me
+  
+    div.form-group
+      div.col-sm-offset-2.col-sm-10
+        button(type="submit").btn.btn-primary Sign in
